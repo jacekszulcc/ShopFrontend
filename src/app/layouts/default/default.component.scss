@@ -1,11 +1,5 @@
-:host {
-    display: flex;
-    flex-direction: column;
-    width: 1200px;
-    margin: 0 auto;
-    height: 100%;
-}
+@import '../../../variables.scss';
 
-.content {
-    padding: 20px;
+.sidebar {
+    background: $lightgray;
 }

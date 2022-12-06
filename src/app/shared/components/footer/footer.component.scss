@@ -1,4 +1,7 @@
-:host{
-    background: #999;
-    padding: 20px;
+@import '../../../../variables.scss';
+
+.footer {
+    background: $darkgray;
+    color: #aaa;
 }
+

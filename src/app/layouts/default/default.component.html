@@ -1,13 +1,14 @@
 <div class="container">
         <app-header></app-header>
         <div class="row">
-            <div class="col-2 sidebar" style="height: 1000px;">
+            <div class="col-2 sidebar d-flex align-items-stretch">
                 <app-sidebar></app-sidebar>
             </div>
-            <div class="col-10" style="height: 1000px;">
+            <div class="col-10 sidebar d-flex flex-column gap-2">
                 <div>
                     <router-outlet></router-outlet>
-                </div>       
+                </div>
+                <div></div>       
             </div>
         </div>
         <app-footer></app-footer>

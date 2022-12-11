@@ -1,0 +1,14 @@
+@import '../../../variables.scss';
+
+.header{
+    background: $darkgray;
+}
+
+.logo {
+    font-size: 30px;
+    color: white;
+}
+
+.logoIcon, shoppingBasket {
+    font-size: 30px;
+}

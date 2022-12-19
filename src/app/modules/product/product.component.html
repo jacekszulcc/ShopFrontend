@@ -1,6 +1,6 @@
 <h1>Produkty</h1>
 
-<mat-card *ngFor="let product of products" class="m-2">
+<mat-card *ngFor="let product of page?.content" class="m-2">
     <div class="row">
         <div class="col-10">
             <mat-card-title>{{product.name}}</mat-card-title>
@@ -25,3 +25,11 @@
         </mat-card-actions>
     </div>
 </mat-card>
+
+<mat-paginator *ngIf="page && page.totalElements > 0"
+            [length]="page.totalElements"
+            [pageSize]="10"
+            [pageSizeOptions]="[10, 25, 50, 100]"
+            aria-label="Wybierz stronę"
+            (page)="onPageEvent($event)">
+</mat-paginator>

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Product } from './model/product';
 import { ProductService } from './product.service';
+import { Page } from 'src/app/shared/model/page';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-product',
@@ -9,7 +11,7 @@ import { ProductService } from './product.service';
 })
 export class ProductComponent {
 
-    products: Product[] = [];
+    page!: Page<Product>;
 
   constructor (private productService: ProductService) {}
   
@@ -18,7 +20,16 @@ export class ProductComponent {
   }
 
   getProducts() {
-    this.productService.getProducts()
-      .subscribe(products => this.products = products);
+    this.getProductPage(0, 10);
   }
+  
+  onPageEvent(event: PageEvent){
+    this.getProductPage(event.pageIndex, event.pageSize);  
+  }
+
+  private getProductPage(page: number, size: number) {
+    this.productService.getProducts(page, size)
+      .subscribe(page => this.page = page);
+  }
+
 }

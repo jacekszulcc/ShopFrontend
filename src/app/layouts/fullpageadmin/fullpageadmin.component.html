@@ -14,7 +14,11 @@
     </div>
     <div class="row">
         <div class="col-2 sidebar" style="height: 1000px">
-                Sidebar
+                <mat-selection-list [multiple]="false">
+                    <mat-list-option><a routerLink="/admin">Dashboard</a></mat-list-option>
+                    <mat-list-option><a routerLink="/admin/products">Produkty</a></mat-list-option>
+                    <mat-list-option><a routerLink="/admin">Link</a></mat-list-option>
+                </mat-selection-list>    
         </div>
         <div class="col-10">
                 <router-outlet></router-outlet>

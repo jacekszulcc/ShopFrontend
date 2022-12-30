@@ -1,4 +1,7 @@
-<h1>Lista produktów</h1>
+<div class="col-4 d-flex gap-4 justify-content-start align-items-center p-4">
+  <h2>Lista produktów</h2>
+  <button mat-raised-button color="accent" routerLink="/admin/products/add">Dodaj produkt <mat-icon>add</mat-icon></button>
+</div>
 <table mat-table [dataSource]="data" class="mat-elevation-z8">
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> Id </th>

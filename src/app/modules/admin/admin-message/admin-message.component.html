@@ -1,0 +1,11 @@
+<div class="row messages d-flex gap-1 align-items-center" *ngIf="messages.length > 0">
+    <div>
+        <div class="row d-flex gap-1 align-items-center">
+            <div class="row" *ngFor="let message of messages">{{message}}</div>
+        </div>
+    <div class="row">
+        <button mat-icon-button class="clearMessages" (click)="clearMessages()">
+            <mat-icon>cancel</mat-icon>
+        </button>
+    </div>
+</div>

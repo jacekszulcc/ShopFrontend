@@ -1,0 +1,19 @@
+<div class="col">
+    <div class="row">
+        <div>
+            <img *ngIf="!product?.image" src="/assets/image-placeholder.png" width="350">
+            <img *ngIf="product?.image" src="{{'/api/data/productImage/' + product?.image}}" width="350">
+        </div>
+        <div class="col" >
+            <h1>{{product?.name}}</h1>
+            <small>{{product?.category}}</small>
+            <div class="description">
+                {{product?.description}}
+            </div>
+            <div class="row">
+            </div>
+                <span class="price">{{product?.price}} {{product?.currency}}</span>
+            <button mat-flat-button color="warn">Do koszyka</button>
+        </div>
+    </div>
+</div>

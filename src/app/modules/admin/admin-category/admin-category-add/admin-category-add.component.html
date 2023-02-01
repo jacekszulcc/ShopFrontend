@@ -1,0 +1,4 @@
+<h2>Dodaj kategorię</h2>
+<form class="form-group p-5" [formGroup]="categoryForm" (submit)="submit()">
+    <app-admin-category-form [parentForm]="categoryForm"></app-admin-category-form>
+</form>

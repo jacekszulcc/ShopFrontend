@@ -16,8 +16,6 @@ import { AdminCategoryComponent } from 'src/app/modules/admin/admin-category/adm
 import { AdminCategoryAddComponent } from 'src/app/modules/admin/admin-category/admin-category-add/admin-category-add.component';
 import { AdminCategoryUpdateComponent } from 'src/app/modules/admin/admin-category/admin-category-update/admin-category-update.component';
 import { AdminCategoryFormComponent } from 'src/app/modules/admin/admin-category/admin-category/admin-category-form/admin-category-form.component';
-import { CategoryComponent } from 'src/app/modules/category/category.component';
-
 
 @NgModule({
   declarations: [
@@ -32,8 +30,7 @@ import { CategoryComponent } from 'src/app/modules/category/category.component';
     AdminCategoryComponent,
     AdminCategoryAddComponent,
     AdminCategoryUpdateComponent,
-    AdminCategoryFormComponent,
-    CategoryComponent
+    AdminCategoryFormComponent
   ],
   imports: [
     CommonModule,

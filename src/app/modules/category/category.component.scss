@@ -1,0 +1,25 @@
+@import '../../../variables.scss';
+
+.productImage {
+    margin-right: 10px;
+}
+
+.productPrice {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 20px;
+    color: $warn;
+}
+
+.productContent {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #777;
+}

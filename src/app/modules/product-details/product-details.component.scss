@@ -2,6 +2,7 @@
 .description, .fullDescription{
     margin-top:20px;
     margin-bottom: 25px;
+    padding: px;
 }
 .price{
     font-size: 30px;
@@ -9,4 +10,10 @@
     margin-top: 20px;
     margin-bottom: 20px;
     color: $warn;
+}
+
+.review{
+    background-color: white;
+    margin: 20px 0;
+    padding: 7px;
 }

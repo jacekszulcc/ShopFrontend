@@ -7,6 +7,8 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ProductDetailsComponent } from 'src/app/modules/product-details/product-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CategoryComponent } from 'src/app/modules/category/category.component';
+import { CartComponent } from 'src/app/modules/cart/cart.component';
 
 
 
@@ -15,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     DefaultComponent,
     HomeComponent,
     ProductComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,30 @@
+<h1>Koszyk</h1>
+
+<div class="col" *ngIf="summary?.items">
+    <div class="row card-hrow">
+        <div class="col-3 cart-hcol-1">Obraz</div>
+        <div class="col-3 cart-hcol-2">Nazwa</div>
+        <div class="col-3 cart-hcol-3">Ilość</div>
+        <div class="col-3 cart-hcol-4">Wartość</div>
+    </div>
+    <div *ngFor="let item of summary?.items">
+        <div class="row card-row">
+            <div class="col-6 cart-col-1">
+                <a routerLink="{{'/products/' + item?.product?.slug}}">
+                    <img *ngIf="!item?.product?.image" src="/assets/image-placeholder.png" width="50">
+                    <img *ngIf="item?.product?.image" src="{{'/api/data/productImage/' + item?.product?.image}}" width="100">
+                </a>
+            </div>
+            <div class="col-3 cart-col-2">{{item?.product?.name}}</div>
+            <div class="col-3 cart-col-3">{{item?.quantity}}</div>
+            <div class="col-3 cart-col-4">{{item?.lineValue}}</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="summary"> Wartość: </div>
+        <div class="summary"> <b>{{summary?.summary?.grossValue}}</b></div>
+    </div>
+</div>
+<div *ngIf="!summary?.items">
+    Koszyk jest pusty
+</div>

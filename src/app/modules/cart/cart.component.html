@@ -35,6 +35,10 @@
                 <button mat-flat-button color="warn" (click)="submit()">Zaktualizuj koszyk</button>
             </div>
         </div>
+        <div>
+            <button mat-flat-button color="warn" (click)="back()">Powrót do
+            zakupów</button>
+            </div>
     </div>
 </form>
 <div *ngIf="!summary?.items?.length">

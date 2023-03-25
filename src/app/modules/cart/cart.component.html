@@ -27,18 +27,18 @@
             </div>
         </div>
         <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
+            <div class="col d-flex align-items-center">
+                <button mat-flat-button color="warn" (click)="back()">Powrót do zakupów</button>
+            </div>
             <div class="col summary"> Wartość: </div>
             <div class="col summary"> <b>{{summary?.summary?.grossValue}}</b></div>
             <div class="col d-flex align-items-center">
                 <button mat-flat-button color="warn" (click)="submit()">Zaktualizuj koszyk</button>
             </div>
-        </div>
-        <div>
-            <button mat-flat-button color="warn" (click)="back()">Powrót do
-            zakupów</button>
+            <div class="col d-flex align-items-right">
+                <button type="button" class="orderButton" color="accent" routerLink="/order">Zamawiam</button>
             </div>
+        </div>
     </div>
 </form>
 <div *ngIf="!summary?.items?.length">

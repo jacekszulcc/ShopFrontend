@@ -7,9 +7,9 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ProductDetailsComponent } from 'src/app/modules/product-details/product-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CategoryComponent } from 'src/app/modules/category/category.component';
 import { CartComponent } from 'src/app/modules/cart/cart.component';
 import { OrderComponent } from 'src/app/modules/order/order.component';
+import { ReplacePipe } from 'src/app/modules/common/pipe/replacePipe';
 
 
 
@@ -20,7 +20,8 @@ import { OrderComponent } from 'src/app/modules/order/order.component';
     ProductComponent,
     ProductDetailsComponent,
     CartComponent,
-    OrderComponent
+    OrderComponent,
+    ReplacePipe
   ],
   imports: [
     CommonModule,

@@ -8,9 +8,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatSelectModule} from '@angular/material/select';
-import {MatBadgeModule} from '@angular/material/badge';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatRadioModule } from '@angular/material/radio';
 @NgModule({
   declarations: [],
   imports: [
@@ -25,7 +26,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatSnackBarModule,
     MatDialogModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    MatRadioModule
   ],
   exports: [
     MatIconModule,
@@ -38,7 +40,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatSnackBarModule,
     MatDialogModule,
     MatSelectModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatRadioModule
   ]
 })
 export class MaterialModule { }

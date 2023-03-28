@@ -20,6 +20,7 @@ import { CategoryComponent } from './modules/category/category.component';
 import { AdminReviewComponent } from './modules/admin/admin-review/admin-review.component';
 import { CartComponent } from './modules/cart/cart.component';
 import { OrderComponent } from './modules/order/order.component';
+import { AdminOrderExportComponent } from './modules/admin/admin-order/admin-order-export/admin-order-export.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,7 @@ const routes: Routes = [
       { path: 'admin/reviews', component: AdminReviewComponent},
       { path: 'admin/orders', component: AdminOrderComponent},
       { path: 'admin/orders/update/:id', component: AdminOrderUpdateComponent},
+      { path: 'admin/orders/export', component: AdminOrderExportComponent},
     ]
   }
 ];

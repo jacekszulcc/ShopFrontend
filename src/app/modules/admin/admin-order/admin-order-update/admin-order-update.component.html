@@ -6,7 +6,7 @@
     Data złożenia: {{order?.placeDate | date : 'yyyy-MM-dd HH:mm'}}<br />
     Płatność: {{order?.payment?.name}}<br /><br />
     
-    <form [formGroup]="formGroup" fxLayaout="row" fxLayoutAlign="space-between start" (submit)="changeStatus()">
+    <form [formGroup]="formGroup" (submit)="changeStatus()">
         <mat-form-field appearance="fill">
             <mat-label>Status</mat-label>
             <mat-select formControlName="orderStatus">
@@ -16,25 +16,25 @@
         <button mat-flat-button color="primary">Zapisz</button>
     </form>
 </div>
-<div>
+<div class="container">
     <h2>Pozycje</h2>
-    <div fxLayaout="row" fxLayoutAlign="space-between start">
-        <div class="order-hcol-1">
-            Nazwa
-        </div>
-        <div class="order-hcol-2">Ilość</div>
-        <div class="order-hcol-3">Wartość</div>
+    <div class="row">
+        <div class="col order-hcol-1">Nazwa</div>
+        <div class="col order-hcol-2">Ilość</div>
+        <div class="col order-hcol-3">Wartość</div>
     </div>
-    <div *ngFor="let row of order?.orderRows" fxLayaout="row" fxLayoutAlign="space-between start">
-        <div class="order-col-1">
+    <div *ngFor="let row of order?.orderRows" class="row">
+        <div class="col order-col-1">
             <span *ngIf="row.product">{{row?.product?.name}}</span>
             <span *ngIf="row.shipment">{{row?.shipment?.name}}</span>
         </div>
-        <div>{{row.quantity}}</div>
-        <div>{{row.quantity * row.price}}</div>
+        <div class="col">{{row.quantity}}</div>
+        <div class="col">{{row.quantity * row.price}}</div>
     </div>
-    <div fxLayoutAlign="end end">
-        <b>Wartość: {{order?.grossValue}}</b>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"><b>Wartość: {{order?.grossValue}}</b></div>
     </div>
 </div>
 <div>
@@ -46,4 +46,13 @@
     <div>Miasto: {{order?.city}}</div>
     <div>Email: {{order?.email}}</div>
     <div>Tel: {{order?.phone}}</div>
+</div>
+<div>
+    <h2>Log zdarzeń</h2>
+    <div>
+        <div *ngFor="let log of order?.orderLogs" class="orderLog">
+            <div>{{log?.created | date : 'yyyy-MM-dd HH:mm'}}</div>
+            <div>{{log?.note}}</div>        
+        </div>
+    </div>
 </div>

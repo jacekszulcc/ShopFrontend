@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { thermometerSnow } from 'ngx-bootstrap-icons';
 import { Observable } from 'rxjs';
 import { Page } from '../../ common/model/page';
 import { AdminOrder } from './model/adminOrder';
@@ -31,5 +32,9 @@ export class AdminOrderService {
     return this.http.get(`/api/admin/orders/export?from=${from}&to=${to}&orderStatus=${orderStatus}`, 
       {responseType: 'blob', observe: 'response'}
       );
+  }
+
+  getSalesStatistics(): Observable<any>{
+    return this.http.get("/api/admin/orders/stats");
   }
 }

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { thermometerSnow } from 'ngx-bootstrap-icons';
 import { Observable } from 'rxjs';
-import { Page } from '../../ common/model/page';
+import { Page } from '../../common/model/page';
 import { AdminOrder } from './model/adminOrder';
 
 @Injectable({

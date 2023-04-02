@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit{
         });
     }
   }
-
+  
   register(){
     if(this.registerForm.valid && this.isPasswordIdentical(this.registerForm.value)){
       this.loginService.register(this.registerForm.value)
